@@ -1,4 +1,4 @@
-package com.example.goodapp.ui.notifications
+package com.example.goodapp.ui.list
 
 import android.os.Bundle
 import android.view.LayoutInflater

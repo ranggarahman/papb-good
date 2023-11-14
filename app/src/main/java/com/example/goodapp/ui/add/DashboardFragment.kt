@@ -1,4 +1,4 @@
-package com.example.goodapp.ui.dashboard
+package com.example.goodapp.ui.add
 
 import android.os.Bundle
 import android.view.LayoutInflater

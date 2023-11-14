@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.goodapp.data.TaskRepository
+import com.example.goodapp.ui.detail.HomeViewModel
 
 class ViewModelFactory private constructor(private val taskRepository: TaskRepository) :
     ViewModelProvider.Factory{
@@ -20,18 +21,18 @@ class ViewModelFactory private constructor(private val taskRepository: TaskRepos
             }
     }
 
-//    @Suppress("UNCHECKED_CAST")
-//    override fun <T : ViewModel> create(modelClass: Class<T>): T =
-//        when {
-//            modelClass.isAssignableFrom(TaskViewModel::class.java) -> {
-//                TaskViewModel(taskRepository) as T
-//            }
+    @Suppress("UNCHECKED_CAST")
+    override fun <T : ViewModel> create(modelClass: Class<T>): T =
+        when {
+            modelClass.isAssignableFrom(HomeViewModel::class.java) -> {
+                HomeViewModel(taskRepository) as T
+            }
 //            modelClass.isAssignableFrom(DetailTaskViewModel::class.java) -> {
 //                DetailTaskViewModel(taskRepository) as T
 //            }
 //            modelClass.isAssignableFrom(AddTaskViewModel::class.java) -> {
 //                AddTaskViewModel(taskRepository) as T
 //            }
-//            else -> throw Throwable("Unknown ViewModel class: " + modelClass.name)
-//        }
+            else -> throw Throwable("Unknown ViewModel class: " + modelClass.name)
+        }
 }

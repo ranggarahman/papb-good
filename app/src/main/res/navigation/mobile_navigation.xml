@@ -7,28 +7,21 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.goodapp.ui.home.HomeFragment"
+        android:name="com.example.goodapp.ui.detail.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_navigation_home_to_blankFragment"
-            app:destination="@id/blankFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.example.goodapp.ui.dashboard.DashboardFragment"
+        android:name="com.example.goodapp.ui.add.DashboardFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.example.goodapp.ui.notifications.NotificationsFragment"
+        android:name="com.example.goodapp.ui.list.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
-    <fragment
-        android:id="@+id/blankFragment"
-        android:name="com.example.goodapp.BlankFragment"
-        android:label="fragment_blank"
-        tools:layout="@layout/fragment_blank" />
+
 </navigation>
