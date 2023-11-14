@@ -1,6 +1,6 @@
 package com.example.goodapp.data
 
-//TODO 2 : Define data access object (DAO)
+//Define data access object (DAO)
 import androidx.lifecycle.LiveData
 import androidx.paging.DataSource
 import androidx.room.Dao

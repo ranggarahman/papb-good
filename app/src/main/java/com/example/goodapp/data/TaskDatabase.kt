@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
-import com.dicoding.todoapp.R
+import com.example.goodapp.R
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -17,7 +17,7 @@ import java.io.IOException
 import java.io.InputStreamReader
 import java.util.concurrent.Executors
 
-//TODO 3 : Define room database class and prepopulate database using JSON
+//Define room database class and prepopulate database using JSON
 @Database(entities = [Task::class], version = 2)
 abstract class TaskDatabase : RoomDatabase() {
 
