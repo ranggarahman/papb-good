@@ -1,7 +1,8 @@
 package com.example.goodapp.ui
 
+import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -9,6 +10,8 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.goodapp.R
 import com.example.goodapp.databinding.ActivityMainBinding
+import com.example.goodapp.ui.add.AddTaskActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,7 +21,12 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.toolbar.visibility = View.GONE
         setSupportActionBar(binding.toolbar)
+
+        binding.fab.setOnClickListener {
+            startActivity(Intent(this@MainActivity, AddTaskActivity::class.java))
+        }
 
         val navView: BottomNavigationView = binding.navView
 
@@ -27,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
+                R.id.navigation_all_task, R.id.navigation_completed_task
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

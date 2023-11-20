@@ -1,6 +1,5 @@
-package com.example.goodapp.ui.detail
+package com.example.goodapp.ui.list
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,16 +12,16 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.goodapp.data.Task
-import com.example.goodapp.databinding.FragmentHomeBinding
+import com.example.goodapp.databinding.FragmentAllTaskBinding
+import com.example.goodapp.ui.HomeViewModel
 import com.example.goodapp.ui.ViewModelFactory
-import com.example.goodapp.ui.add.AddTaskActivity
-import com.example.goodapp.ui.list.TaskAdapter
 import com.example.goodapp.utils.Event
+import com.example.goodapp.utils.TasksFilterType
 import com.google.android.material.snackbar.Snackbar
 
-class HomeFragment : Fragment() {
+class AllTaskFragment : Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentAllTaskBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -37,17 +36,15 @@ class HomeFragment : Fragment() {
     ): View {
         val factory = ViewModelFactory.getInstance(requireContext())
         homeViewModel = ViewModelProvider(this, factory)[HomeViewModel::class.java]
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentAllTaskBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         initAction()
 
-        binding.fab.setOnClickListener {
-            val addIntent = Intent(requireContext(), AddTaskActivity::class.java)
-            startActivity(addIntent)
-        }
+        //All Task Filter
+        homeViewModel.filter(TasksFilterType.ALL_TASKS)
 
         taskAdapter = TaskAdapter { task, isChecked ->
             // Handle task checkbox changes here

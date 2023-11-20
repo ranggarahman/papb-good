@@ -1,4 +1,4 @@
-package com.example.goodapp.ui.detail
+package com.example.goodapp.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
