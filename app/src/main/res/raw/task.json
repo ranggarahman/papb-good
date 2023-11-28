@@ -1,0 +1,25 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Belajar Mobile Development",
+      "description": "Belajar dasar-dasar materi di kelas Mobile",
+      "dueDate": 1577811600000,
+      "completed": false
+    },
+    {
+      "id": 2,
+      "title": "Mengerjakan Capstone",
+      "description": "Melanjutkan Pengerjaan Capstone DTETI",
+      "dueDate": 1655226000000,
+      "completed": true
+    },
+    {
+      "id": 3,
+      "title": "Pergi ke Gym",
+      "description": "Saatnya Latihan Upper Body",
+      "dueDate": 1735578000000,
+      "completed": false
+    }
+  ]
+}

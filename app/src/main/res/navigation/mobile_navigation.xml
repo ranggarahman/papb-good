@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_all_task">
+
+    <fragment
+        android:id="@+id/navigation_all_task"
+        android:name="com.example.goodapp.ui.list.AllTaskFragment"
+        android:label="All Task"
+        tools:layout="@layout/fragment_all_task" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_completed_task"
+        android:name="com.example.goodapp.ui.list.CompletedTaskFragment"
+        android:label="Completed Task"
+        tools:layout="@layout/fragment_completed_task" />
+
+</navigation>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_all_task"
+        android:icon="@drawable/ic_round_format_list_numbered_24"
+        android:title="All Task" />
+
+    <item
+        android:id="@+id/navigation_completed_task"
+        android:icon="@drawable/ic_completed_24"
+        android:title="Completed Task" />
+
+</menu>
