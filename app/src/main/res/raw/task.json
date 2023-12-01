@@ -20,6 +20,13 @@
       "description": "Saatnya Latihan Upper Body",
       "dueDate": 1735578000000,
       "completed": false
+    },
+    {
+      "id": 4,
+      "title": "Ke Toko Buku",
+      "description": "Beli Buku Favorit",
+      "dueDate": 1700931600000,
+      "completed": false
     }
   ]
 }

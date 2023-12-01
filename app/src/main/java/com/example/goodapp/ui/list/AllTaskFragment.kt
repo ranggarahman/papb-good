@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.paging.PagedList
 import androidx.recyclerview.widget.ItemTouchHelper
@@ -48,18 +47,20 @@ class AllTaskFragment : Fragment() {
 
         taskAdapter = TaskAdapter { task, isChecked ->
             // Handle task checkbox changes here
-            // Update the task's completion status in the ViewModel or perform other operations
+            // Update the task's completion status in the ViewModel
             homeViewModel.completeTask(task, isChecked)
         }
 
-        binding.rvTask.layoutManager = LinearLayoutManager(requireContext())
-        binding.rvTask.adapter = taskAdapter
+        binding.allTaskContent.rvTask.layoutManager = LinearLayoutManager(requireContext())
+        binding.allTaskContent.rvTask.adapter = taskAdapter
 
         homeViewModel.snackbarText.observe(viewLifecycleOwner) {
             showSnackBar(it)
         }
 
-        homeViewModel.tasks.observe(viewLifecycleOwner, Observer(this::showRecyclerView))
+        homeViewModel.tasks.observe(viewLifecycleOwner){
+            showRecyclerView(it)
+        }
 
     }
 
@@ -139,7 +140,7 @@ class AllTaskFragment : Fragment() {
             }
 
         })
-        itemTouchHelper.attachToRecyclerView(binding.rvTask)
+        itemTouchHelper.attachToRecyclerView(binding.allTaskContent.rvTask)
     }
 
     override fun onDestroyView() {

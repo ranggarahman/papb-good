@@ -25,7 +25,7 @@ class TaskTitleView : AppCompatTextView {
             when (state) {
                 DONE -> {
                     paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
-                    setTextColor(ContextCompat.getColor(context, R.color.black))
+                    setTextColor(ContextCompat.getColor(context, R.color.green))
                 }
                 NORMAL -> {
                     paintFlags = 0

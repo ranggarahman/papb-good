@@ -52,8 +52,8 @@ class CompletedTaskFragment : Fragment() {
             homeViewModel.completeTask(task, isChecked)
         }
 
-        binding.rvTask.layoutManager = LinearLayoutManager(requireContext())
-        binding.rvTask.adapter = taskAdapter
+        binding.completedTaskContent.rvTask.layoutManager = LinearLayoutManager(requireContext())
+        binding.completedTaskContent.rvTask.adapter = taskAdapter
 
         homeViewModel.snackbarText.observe(viewLifecycleOwner) {
             showSnackBar(it)
@@ -139,7 +139,7 @@ class CompletedTaskFragment : Fragment() {
             }
 
         })
-        itemTouchHelper.attachToRecyclerView(binding.rvTask)
+        itemTouchHelper.attachToRecyclerView(binding.completedTaskContent.rvTask)
     }
 
     override fun onDestroyView() {
