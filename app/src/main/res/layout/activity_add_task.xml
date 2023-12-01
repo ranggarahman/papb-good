@@ -57,5 +57,13 @@
             android:text="@string/due_date" />
     </LinearLayout>
 
+    <Button
+        android:id="@+id/button_save_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Task"
+        android:layout_marginTop="8dp"
+        />
+
 
 </LinearLayout>

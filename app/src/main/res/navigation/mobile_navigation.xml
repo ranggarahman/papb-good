@@ -18,4 +18,9 @@
         android:label="Completed Task"
         tools:layout="@layout/fragment_completed_task" />
 
+    <fragment
+        android:id="@+id/navigation_active_task"
+        android:name="com.example.goodapp.ui.list.ActiveTaskFragment"
+        android:label="Active Task" />
+
 </navigation>

@@ -7,6 +7,11 @@
         android:title="All Task" />
 
     <item
+        android:id="@+id/navigation_active_task"
+        android:icon="@drawable/ic_active"
+        android:title="Active Task" />
+
+    <item
         android:id="@+id/navigation_completed_task"
         android:icon="@drawable/ic_completed_24"
         android:title="Completed Task" />
