@@ -20,8 +20,12 @@ Aplikasi Android untuk Mata Kuliah PAPB
 
 ## How to Run the Project
 
+IMPORTANT !! ⚠️
+To ensure initial data is loaded properly, make sure `task.json` exists in the following directory `app/src/main/res/raw`
+
 1. Ensure you have the required prerequisites installed.
 2. Open the project in Android Studio.
 3. Verify the Gradle version in the `distributionUrl` in the `gradle-wrapper.properties` file.
 4. Set up the appropriate SDK versions in the project settings.
 5. Build and run the project.
+
