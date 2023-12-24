@@ -29,3 +29,8 @@ To ensure initial data is loaded properly, make sure `task.json` exists in the f
 4. Set up the appropriate SDK versions in the project settings.
 5. Build and run the project.
 
+Implemented in the App :
+1. MVVM Architecture Pattern
+2. Navigation Component
+3. Recycler View (Paging Adapter)
+4. Notification Worker
